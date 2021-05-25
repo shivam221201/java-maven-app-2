@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: shivamjavamavenapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shivamjavamavenapp
+  template:
+    metadata:
+      labels:
+        app: shivamjavamavenapp 
+    spec:
+      containers:
+        - name: shivamjavamavenapp 
+          image: bootcamp221201.azurecr.io/shivamjavamavenapp
+          ports:
+          - containerPort: 80
